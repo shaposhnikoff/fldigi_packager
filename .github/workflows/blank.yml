@@ -10,6 +10,12 @@ on:
     branches:
       - '*'
 
+env:
+  DAY_OF_WEEK: Monday
+  app_name: fldigi
+  app_version: 4.1.20
+  app_arch: arm64
+
 
 jobs:
   build:
@@ -24,9 +30,6 @@ jobs:
           #echo -e "echo sample" > .debpkg/usr/bin/samplescript
           #chmod +x .debpkg/usr/bin/samplescript
           #echo -e "a=1" > .debpkg/usr/lib/samplescript/samplescript.conf
-          app_name="fldigi"
-          app_version="4.1.20"
-          app_arch="arm64"
           mkdir $app_name'_'$app_version'_'$app_arch
           mkdir -p $app_name'_'$app_version'_'$app_arch/usr/local/bin
           #cp ~/YourProjects/Hello/hello $app_name'_'$app_version'_'$app_arch/usr/local/bin
