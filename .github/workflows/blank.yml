@@ -29,7 +29,7 @@ jobs:
           app_arch="arm64"
           mkdir $app_name'_'$app_version'_'$app_arch
           mkdir -p $app_name'_'$app_version'_'$app_arch/usr/local/bin
-          cp ~/YourProjects/Hello/hello $app_name'_'$app_version'_'$app_arch/usr/local/bin
+          #cp ~/YourProjects/Hello/hello $app_name'_'$app_version'_'$app_arch/usr/local/bin
           mkdir $app_name'_'$app_version'_'$app_arch/DEBIAN
           touch $app_name'_'$app_version'_'$app_arch/DEBIAN/control
           
