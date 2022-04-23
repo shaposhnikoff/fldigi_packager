@@ -30,11 +30,11 @@ jobs:
           #echo -e "echo sample" > .debpkg/usr/bin/samplescript
           #chmod +x .debpkg/usr/bin/samplescript
           #echo -e "a=1" > .debpkg/usr/lib/samplescript/samplescript.conf
-          mkdir $app_name'_'$app_version'_'$app_arch
-          mkdir -p $app_name'_'$app_version'_'$app_arch/usr/local/bin
+          mkdir ${{env.app_name}}'_'${{env.app_version}}'_'${{env.app_arch}}
+          mkdir -p ${{env.app_name}}'_'${{env.app_version}}'_'${{env.app_arch}}/usr/local/bin
           #cp ~/YourProjects/Hello/hello $app_name'_'$app_version'_'$app_arch/usr/local/bin
-          mkdir $app_name'_'$app_version'_'$app_arch/DEBIAN
-          touch $app_name'_'$app_version'_'$app_arch/DEBIAN/control
+          mkdir ${{env.app_name}}'_'${{env.app_version}}'_'${{env.app_arch}}/DEBIAN
+          touch ${{env.app_name}}'_'${{env.app_version}}'_'${{env.app_arch}}/DEBIAN/control
           
       - uses: jiro4989/build-deb-action@v2
         with:
